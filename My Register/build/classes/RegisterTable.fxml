@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="RegisterTableController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="7.0" layoutY="36.0" prefHeight="445.0" prefWidth="1010.0">
+        <columns>
+          <TableColumn fx:id="checkNumCol" prefWidth="75.0" text="Check #" />
+          <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="transactionCol" prefWidth="512.0" text="Transaction" />
+            <TableColumn fx:id="withdrawCol" prefWidth="126.0" text="Withdraw" />
+            <TableColumn fx:id="depositCol" prefWidth="114.0" text="Deposit" />
+            <TableColumn fx:id="balanceCol" prefWidth="121.0" text="Balance" />
+        </columns>
+      </TableView>
+      <TextField fx:id="checkNumField" layoutX="14.0" layoutY="498.0" prefHeight="39.0" prefWidth="72.0" promptText="1234" />
+      <TextField fx:id="dateField" layoutX="92.0" layoutY="498.0" prefHeight="39.0" prefWidth="66.0" promptText="1/15" />
+      <TextField fx:id="transactionField" layoutX="164.0" layoutY="498.0" prefHeight="39.0" prefWidth="510.0" promptText="Rent" />
+      <TextField fx:id="withdrawField" layoutX="685.0" layoutY="498.0" prefHeight="39.0" prefWidth="107.0" />
+      <TextField fx:id="depositField" layoutX="802.0" layoutY="498.0" prefHeight="39.0" prefWidth="107.0" />
+      <MenuBar layoutX="-2.0" prefHeight="15.0" prefWidth="1029.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+              <MenuItem mnemonicParsing="false" onAction="#handleCloseApp" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="484.0" layoutY="543.0" mnemonicParsing="false" onAction="#addTransaction" text="Add" />
+      <Label layoutX="31.0" layoutY="480.0" text="Check #" textFill="#030303">
+         <font>
+            <Font name="MV Boli" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="480.0" text="Date" textFill="#141313">
+         <font>
+            <Font name="MV Boli" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="480.0" text="Transaction">
+         <font>
+            <Font name="MV Boli" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="480.0" text="Withdraw">
+         <font>
+            <Font name="MV Boli" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="838.0" layoutY="480.0" text="Deposit">
+         <font>
+            <Font name="MV Boli" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
